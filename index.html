@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ali Jozi</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Custom Hero Style -->
+  <style>
+    .hero-custom {
+      min-height: 100vh;
+      background: #000;
+      color: white;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 80px;
+    }
+
+    /* متن سمت چپ - کاملاً مرتب */
+    .hero-text {
+      text-align: left;
+      z-index: 10;
+    }
+
+    .hero-text h1 {
+      font-size: 3.8rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      color: #fff;
+      line-height: 1.2;
+    }
+
+    .hero-text p {
+      font-size: 1.9rem;
+      font-weight: 300;
+      color: #ccc;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .typed {
+      color: #24c774;
+      font-weight: 500;
+    }
+
+    .typed-cursor {
+      color: #24c774;
+      font-weight: bold;
+      animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* لوگو دسکتاپ - سمت راست */
+    .logo-desktop {
+      position: absolute;
+      right: 6%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 28%;
+      max-width: 360px;
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+      filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.3));
+    }
+
+    .logo-desktop:hover {
+      transform: translateY(-50%) scale(1.12) rotate(6deg);
+      filter: drop-shadow(0 0 45px rgba(0, 255, 255, 0.6));
+    }
+
+    /* لوگو موبایل - زیر متن */
+    .logo-mobile {
+      width: 45%;
+      max-width: 240px;
+      margin: 2.5rem auto 0;
+      display: block;
+      transition: all 0.6s ease;
+      filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.25));
+    }
+
+    .logo-mobile:hover {
+      transform: scale(1.1) rotate(4deg);
+      filter: drop-shadow(0 0 30px rgba(0, 255, 255, 0.5));
+    }
+
+    /* موبایل: متن وسط، لوگو زیرش */
+    @media (max-width: 991px) {
+      .hero-text {
+        text-align: center;
+      }
+      .hero-text h1 {
+        font-size: 3rem;
+      }
+      .hero-text p {
+        font-size: 1.6rem;
+      }
+      .logo-desktop { display: none; }
+    }
+
+    @media (min-width: 992px) {
+      .logo-mobile { display: none; }
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">Ali Jozi</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-custom">
+    <div class="container">
+
+      <!-- ردیف اصلی -->
+      <div class="row align-items-center">
+
+        <!-- متن سمت چپ (یا وسط در موبایل) -->
+        <div class="col-lg-6 hero-text">
+          <h1>Ali Jozi</h1>
+          <p>I'm <span class="typed" data-typed-items="Data Scientist, AI Developer, ML Engineer, Optimization Expert"></span></p>
+        </div>
+
+        <!-- فضای خالی سمت راست (برای لوگو) -->
+        <div class="col-lg-6 d-none d-lg-block"></div>
+
+      </div>
+
+      <!-- لوگو دسکتاپ (مطلق) -->
+      <img src="assets/img/logo.png" alt="Logo" class="logo-desktop">
+
+      <!-- لوگو موبایل (زیر متن) -->
+      <div class="d-lg-none text-center">
+        <img src="assets/img/logo.png" alt="Logo" class="logo-mobile">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Scripts -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    // Typed.js
+    document.addReady(function () {
+      new Typed(".typed", {
+        strings: ["Data Scientist", "AI Developer", "ML Engineer", "Optimization Expert"],
+        typeSpeed: 80,
+        backSpeed: 40,
+        backDelay: 1500,
+        loop: true,
+        cursorChar: "_"
+      });
+    });
+
+    // AOS
+    AOS.init({ duration: 800, once: true });
+  </script>
+</body>
+</html>
